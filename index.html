@@ -69,13 +69,15 @@ a{color:#2f6b3f}
 <!-- ============================== ENGLISH ============================== -->
 <section id="doc-en">
   <h1>Privacy Policy</h1>
-  <p class="meta">Tubik for iOS and Android · version 1.0 · effective <span class="fill">2 September 2026</span></p>
+  <p class="meta">Tubik for iOS and Android · version 1.0 · policy version 2 · effective <span class="fill">3 September 2026</span></p>
 
   <div class="tldr">
-    <b>Tubik collects nothing.</b> There is no account, no analytics, no advertising and
-    no tracking. Your music, your folders and your settings stay on your device. The app
-    connects to the internet only when you use its built-in browser or download a file
-    you chose yourself.
+    <b>Your music, your folders and your settings stay on your device.</b> There is no
+    account and no analytics. Two things do leave it: in the free version Tubik shows ads,
+    which Google selects, and a check that tells the app whether your subscription is
+    active. Premium removes those ads and the requests behind them. Websites you open in
+    the built-in browser carry their own ads and trackers — those are theirs, not ours,
+    and Premium does not touch them.
   </div>
 
   <h2>1. Who is responsible</h2>
@@ -85,12 +87,33 @@ a{color:#2f6b3f}
   websites you open inside the app's browser — see section 6.</p>
 
   <h2>2. What we collect about you</h2>
-  <p><b>Nothing.</b> Tubik has no servers of its own. It does not send us usage data,
-  device identifiers, diagnostics, crash reports, advertising IDs or your location.
-  There is no sign-up, no login and no user profile.</p>
-  <p>Because we receive no personal data, there is nothing for us to sell, share,
-  profile or retain. Version 1.0 contains no analytics SDK, no advertising SDK and no
-  crash-reporting SDK.</p>
+  <p><b>Nothing reaches us directly.</b> Tubik has no servers of its own, sends us no
+  usage data, no diagnostics and no crash reports, and has no sign-up, no login and no
+  user profile. Two third-party services do receive data, and only because the free
+  version shows ads and the app sells a subscription.</p>
+  <ul>
+    <li><b>Google AdMob</b>, to select and measure the ads. It receives your device
+    advertising identifier — only if you allow tracking when iOS asks — your IP address
+    and the approximate region derived from it, your device model and system version, and
+    which ads you were shown or tapped. If you decline tracking, that identifier is not
+    shared and the ads become non-personalised. Google acts under its
+    <a href="https://policies.google.com/privacy" rel="noopener">own privacy policy</a>.</li>
+    <li><b>RevenueCat</b>, to tell the app whether your subscription is active. It
+    receives the purchase receipt issued by Apple, an anonymous identifier the app
+    generates for your installation, your device model, system version and store country.
+    It receives no name, no email address and no payment details: your card is handled by
+    Apple, and we never see it. RevenueCat acts under its
+    <a href="https://www.revenuecat.com/privacy" rel="noopener">own privacy policy</a>.</li>
+  </ul>
+  <p>Neither of them receives your music, your file names, your folders, what you played
+  or anything you did in the built-in browser. That never leaves the device. We ourselves
+  see only totals — how many ads were shown, how many people subscribed — never an
+  individual.</p>
+  <p>With an active Premium subscription no ad is requested at all, so the advertising SDK
+  makes no network calls.</p>
+  <p>This section is about the ads Tubik itself shows. Ads and trackers belonging to
+  websites you open in the built-in browser are a separate matter and are not ours — see
+  section 6.</p>
 
   <h2>3. What stays on your device</h2>
   <p>Tubik stores the following inside its own app storage. It is visible only to Tubik,
@@ -105,6 +128,8 @@ a{color:#2f6b3f}
     <tr><td>Download history and status</td><td>To show progress and let you retry</td></tr>
     <tr><td>Browser bookmarks and history</td><td>Features of the built-in browser</td></tr>
     <tr><td>Cookies, caches and local storage created by websites you visit in the built-in browser</td><td>So sites work and you stay signed in where you signed in yourself</td></tr>
+    <tr><td>Your advertising consent answer, and the counters that keep ads apart</td><td>Including the moment until which ads are paused after you watch a rewarded video</td></tr>
+    <tr><td>The last known state of your subscription</td><td>So Premium keeps working while you are offline</td></tr>
   </table>
 
   <h2>4. When Tubik connects to the internet</h2>
@@ -120,9 +145,19 @@ a{color:#2f6b3f}
     A typed address is opened directly and is not sent to a search engine.</li>
     <li><b>You download a file.</b> Tubik requests that URL from the server that hosts it.
     That server sees your IP address.</li>
+    <li><b>The free version shows you an ad.</b> Tubik requests it from Google, which
+    receives what section 2 lists. With an active subscription this does not happen at
+    all.</li>
+    <li><b>You open the app in the EEA, the UK or Switzerland.</b> The consent form is
+    fetched from Google once, and your answer is then kept on the device.</li>
+    <li><b>You buy or restore a subscription.</b> The purchase itself goes through Apple;
+    the receipt is then checked with RevenueCat, which answers whether the subscription is
+    active.</li>
   </ul>
   <p>None of these requests pass through servers operated by
-  <span class="fill">Taras Grygorovych Shevchenko, PE</span>, and none of them are logged by us.</p>
+  <span class="fill">Taras Grygorovych Shevchenko, PE</span>, because there are none. The ad and subscription
+  requests go to Google and to RevenueCat under their own policies; the rest are between
+  you and the site or server you asked for.</p>
 
   <h2>5. If you write to us</h2>
   <p>The <b>Email developer</b> link in the app opens your own mail app with a message
@@ -134,9 +169,12 @@ a{color:#2f6b3f}
 
   <h2>6. Websites you open in the built-in browser</h2>
   <p>The browser inside Tubik is a real browser: it runs the pages you open, including
-  their scripts, cookies and trackers. Those websites are independent of us and are
+  their scripts, cookies, ads and trackers. Those websites are independent of us and are
   governed by their own privacy policies, not this one. We do not see, receive or control
   what they collect.</p>
+  <p>These are their ads and their trackers, not the ones described in section 2. Premium
+  removes the ads Tubik itself shows and changes nothing about the websites you choose to
+  visit.</p>
   <p>You can clear everything those sites left behind at any time:
   <b>Search → ··· → Clear History and Website Data</b>. That removes browsing history,
   cookies, caches and site storage held by the app.</p>
@@ -147,10 +185,12 @@ a{color:#2f6b3f}
   </div>
 
   <h2>7. Children</h2>
-  <p>Tubik is not directed at children and has no features aimed at them. Because the app
-  collects no personal data from anyone, it collects none from children either. It does
-  contain a general-purpose web browser, so a parent or guardian should decide whether the
-  app is appropriate. Content on third-party websites is not filtered by us.</p>
+  <p>Tubik is not directed at children and has no features aimed at them. It does contain
+  a general-purpose web browser and, in the free version, advertising, so a parent or
+  guardian should decide whether the app is appropriate; content on third-party websites
+  is not filtered by us. We do not knowingly collect anything from children and we do not
+  treat the app as child-directed for advertising. Nothing about any user reaches us
+  directly in any case — see section 2.</p>
 
   <h2>8. Your choices and how to delete your data</h2>
   <ul>
@@ -163,14 +203,21 @@ a{color:#2f6b3f}
     <li><b>Remove everything</b> — delete the app. Because all data is inside the app's
     own storage, deleting the app deletes all of it. There is nothing left on any server
     of ours, because there is no server of ours.</li>
+    <li><b>Change your advertising choices</b> — More → Manage consent, shown in the EEA,
+    the UK and Switzerland; and Settings → Privacy &amp; Security → Tracking on the device
+    itself. A Premium subscription removes the ads altogether.</li>
   </ul>
   <p>If you are in the EU/EEA or the UK, the GDPR gives you rights of access, correction,
   erasure, restriction, objection and portability. We can only act on data we actually
   hold, which is limited to correspondence you send us (section 5); the legal basis for
-  handling that is our legitimate interest in answering support requests. For everything
-  else, the data never leaves your device, so you already control it directly. If you are
-  a California resident, we do not sell or share personal information as those terms are
-  defined by the CCPA/CPRA, and we do not collect it in the first place.</p>
+  handling that is our legitimate interest in answering support requests. Personalised
+  advertising runs on your consent, given in the form described in section 4 and
+  withdrawable at any time; the subscription check runs on the necessity of performing our
+  contract with you. Everything else never leaves your device, so you already control it
+  directly. If you are a California resident: passing your advertising identifier to
+  Google for personalised advertising is <b>sharing</b> for cross-context behavioural
+  advertising under the CCPA/CPRA. Declining the tracking request, or subscribing to
+  Premium, stops it. We do not sell personal information for money.</p>
 
   <h2>9. Security</h2>
   <p>Your files and library data live in the app's private storage, protected by the
@@ -186,11 +233,12 @@ a{color:#2f6b3f}
   You can turn that sharing off in your device settings.</p>
 
   <h2>11. Changes to this policy</h2>
-  <p>If Tubik ever starts collecting anything — for example if crash reporting is added in
-  a later version — this policy will be updated before that version is released, and the
-  App Store privacy information will be updated with it. The effective date at the top
-  shows when this version took effect. Material changes will also be noted in the app's
-  release notes.</p>
+  <p>This is version 2 of this policy. Version 1 said that Tubik collected nothing; that
+  stopped being true when advertising and subscriptions were added, and sections 2, 3, 4
+  and 8 were rewritten for it. If anything else changes — crash reporting, for instance —
+  this policy will be updated before the version that changes it is released, the App
+  Store privacy information will be updated with it, and material changes will be noted in
+  the release notes. The effective date at the top shows when this version took effect.</p>
 
   <h2>12. Governing law</h2>
   <p>This policy is governed by the laws of <span class="fill">Ukraine</span>,
@@ -200,20 +248,21 @@ a{color:#2f6b3f}
   <footer>
     <p><b>Contact:</b> <span class="fill">nrg.ck.ua@gmail.com</span></p>
     <p><b>Published at:</b> <span class="fill">https://airstep.github.io/tubik-privacy/</span></p>
-    <p>Tubik 1.0 · policy version 1 · effective <span class="fill">2 September 2026</span></p>
+    <p>Tubik 1.0 · policy version 2 · effective <span class="fill">3 September 2026</span></p>
   </footer>
 </section>
 
 <!-- ============================== УКРАЇНСЬКА ============================== -->
 <section id="doc-uk" class="hide">
   <h1>Політика конфіденційності</h1>
-  <p class="meta">Tubik для iOS та Android · версія 1.0 · чинна з <span class="fill">2 вересня 2026</span></p>
+  <p class="meta">Tubik для iOS та Android · версія 1.0 · редакція 2 · чинна з <span class="fill">3 вересня 2026</span></p>
 
   <div class="tldr">
-    <b>Tubik не збирає нічого.</b> Немає ні акаунта, ні аналітики, ні реклами, ні
-    відслідковування. Ваша музика, теки й налаштування залишаються на пристрої.
-    Застосунок виходить у мережу лише тоді, коли ви користуєтесь вбудованим браузером
-    або завантажуєте файл, який обрали самі.
+    <b>Ваша музика, теки й налаштування залишаються на пристрої.</b> Немає ні акаунта, ні
+    аналітики. Пристрій покидають дві речі: у безкоштовній версії Tubik показує рекламу,
+    яку добирає Google, і перевірку, що каже застосунку, чи чинна ваша підписка. Premium
+    прибирає цю рекламу й запити за нею. Сайти, які ви відкриваєте у вбудованому браузері,
+    несуть власну рекламу й трекери — вони їхні, не наші, і Premium їх не стосується.
   </div>
 
   <h2>1. Хто відповідальний</h2>
@@ -223,13 +272,34 @@ a{color:#2f6b3f}
   сайтів, які ви відкриваєте у вбудованому браузері — див. розділ 6.</p>
 
   <h2>2. Які дані ми про вас збираємо</h2>
-  <p><b>Жодних.</b> У Tubik немає власних серверів. Застосунок не надсилає нам даних про
-  використання, ідентифікаторів пристрою, діагностики, звітів про падіння, рекламних
-  ідентифікаторів чи вашого місцезнаходження. Немає реєстрації, входу й профілю
-  користувача.</p>
-  <p>Оскільки ми не отримуємо персональних даних, нам нічого продавати, передавати,
-  профілювати чи зберігати. У версії 1.0 немає ні аналітичного, ні рекламного SDK, ні
-  SDK для збору падінь.</p>
+  <p><b>До нас безпосередньо не потрапляє нічого.</b> У Tubik немає власних серверів, він
+  не надсилає нам ні даних про використання, ні діагностики, ні звітів про падіння; немає
+  реєстрації, входу й профілю користувача. Дані отримують дві сторонні служби — і лише
+  тому, що безкоштовна версія показує рекламу, а застосунок продає підписку.</p>
+  <ul>
+    <li><b>Google AdMob</b> — щоб дібрати рекламу й порахувати покази. Отримує рекламний
+    ідентифікатор вашого пристрою (тільки якщо ви дозволили відстеження, коли про це
+    запитала iOS), вашу IP-адресу й приблизний регіон із неї, модель пристрою й версію
+    системи, а також те, яку рекламу вам показали й на що ви натиснули. Якщо ви відмовили
+    у відстеженні, ідентифікатор не передається, а реклама стає неперсоналізованою. Google
+    діє за <a href="https://policies.google.com/privacy" rel="noopener">власною політикою
+    конфіденційності</a>.</li>
+    <li><b>RevenueCat</b> — щоб застосунок знав, чи чинна ваша підписка. Отримує чек про
+    покупку, виданий Apple, анонімний ідентифікатор, який застосунок створює для вашої
+    установки, модель пристрою, версію системи й країну магазину. Не отримує ні імені, ні
+    адреси пошти, ні платіжних даних: вашою карткою розпоряджається Apple, і ми її не
+    бачимо. RevenueCat діє за
+    <a href="https://www.revenuecat.com/privacy" rel="noopener">власною політикою
+    конфіденційності</a>.</li>
+  </ul>
+  <p>Жодна з них не отримує вашої музики, імен файлів, тек, історії прослуховувань і
+  нічого з того, що ви робили у вбудованому браузері. Це не покидає пристрій. Самі ми
+  бачимо лише підсумки — скільки було показів, скільки людей оформили підписку, — і
+  ніколи окрему людину.</p>
+  <p>З чинною підпискою Premium реклама не запитується взагалі, тож рекламний SDK не
+  робить жодного мережевого запиту.</p>
+  <p>Цей розділ — про рекламу, яку показує сам Tubik. Реклама й трекери сайтів, які ви
+  відкриваєте у вбудованому браузері, — окрема історія й не наша: див. розділ 6.</p>
 
   <h2>3. Що залишається на вашому пристрої</h2>
   <p>Перелічене нижче зберігається у власному сховищі застосунку. Воно доступне лише
@@ -244,6 +314,8 @@ a{color:#2f6b3f}
     <tr><td>Історія й стан завантажень</td><td>Щоб показувати прогрес і давати повторити</td></tr>
     <tr><td>Закладки й історія браузера</td><td>Функції вбудованого браузера</td></tr>
     <tr><td>Cookies, кеші й локальні дані сайтів, які ви відкривали у вбудованому браузері</td><td>Щоб сайти працювали й щоб ви лишались авторизовані там, де увійшли самі</td></tr>
+    <tr><td>Вашу відповідь у формі згоди на рекламу й лічильники, які розводять покази в часі</td><td>Зокрема момент, до якого реклама на паузі після перегляду ролика з винагородою</td></tr>
+    <tr><td>Останній відомий стан вашої підписки</td><td>Щоб Premium працював і без мережі</td></tr>
   </table>
 
   <h2>4. Коли Tubik виходить у мережу</h2>
@@ -259,12 +331,21 @@ a{color:#2f6b3f}
     Введена адреса відкривається напряму й до пошуковика не надсилається.</li>
     <li><b>Ви завантажуєте файл.</b> Tubik звертається за цим посиланням до сервера, який
     його роздає. Той сервер бачить вашу IP-адресу.</li>
+    <li><b>Безкоштовна версія показує вам рекламу.</b> Tubik запитує її в Google, і той
+    отримує перелічене в розділі 2. З чинною підпискою цього не відбувається взагалі.</li>
+    <li><b>Ви відкриваєте застосунок у ЄЕЗ, Великій Британії чи Швейцарії.</b> Форма згоди
+    один раз завантажується від Google, а ваша відповідь далі зберігається на
+    пристрої.</li>
+    <li><b>Ви купуєте або відновлюєте підписку.</b> Сама покупка проходить через Apple;
+    далі чек перевіряється в RevenueCat, і той відповідає, чи підписка чинна.</li>
   </ul>
   <p>Жоден із цих запитів не проходить через сервери
-  <span class="fill">Taras Grygorovych Shevchenko, PE</span> і не журналюється нами.</p>
+  <span class="fill">Taras Grygorovych Shevchenko, PE</span>, бо їх немає. Запити реклами й підписки йдуть до
+  Google і до RevenueCat за їхніми політиками; решта — між вами й тим сайтом чи сервером,
+  який ви самі попросили.</p>
 
   <h2>5. Якщо ви нам напишете</h2>
-  <p>Кнопка <b>Email developer</b> у застосунку відкриває ваш власний почтовий клієнт із
+  <p>Кнопка <b>Email developer</b> у застосунку відкриває ваш власний поштовий клієнт із
   листом, у якому вже підставлені версія застосунку й модель пристрою — щоб вам не
   доводилось їх шукати. Нічого не надсилається, поки ви не натиснете «Надіслати». Якщо ви
   напишете, ми отримаємо вашу e-mail адресу, текст листа й цю технічну інформацію, і
@@ -273,9 +354,12 @@ a{color:#2f6b3f}
 
   <h2>6. Сайти, які ви відкриваєте у вбудованому браузері</h2>
   <p>Браузер усередині Tubik — це справжній браузер: він виконує сторінки, які ви
-  відкриваєте, разом із їхніми скриптами, cookies і трекерами. Ці сайти від нас не
-  залежать і керуються власними політиками, а не цією. Ми не бачимо, не отримуємо й не
+  відкриваєте, разом із їхніми скриптами, cookies, рекламою й трекерами. Ці сайти від нас
+  не залежать і керуються власними політиками, а не цією. Ми не бачимо, не отримуємо й не
   контролюємо те, що вони збирають.</p>
+  <p>Це їхня реклама та їхні трекери, не ті, що описані в розділі 2. Premium прибирає
+  рекламу, яку показує сам Tubik, і нічого не змінює на сайтах, які ви вирішили
+  відвідати.</p>
   <p>Усе, що залишили по собі ці сайти, можна прибрати будь-коли:
   <b>Search → ··· → Clear History and Website Data</b>. Це видаляє історію, cookies,
   кеші й локальні дані сайтів, які зберігає застосунок.</p>
@@ -287,10 +371,12 @@ a{color:#2f6b3f}
   </div>
 
   <h2>7. Діти</h2>
-  <p>Tubik не орієнтований на дітей і не має функцій, призначених для них. Оскільки
-  застосунок не збирає персональних даних ні від кого, він не збирає їх і від дітей.
-  Водночас він містить браузер загального призначення, тому чи підходить застосунок
-  дитині — вирішує батько або опікун. Вміст сторонніх сайтів ми не фільтруємо.</p>
+  <p>Tubik не орієнтований на дітей і не має функцій, призначених для них. Водночас він
+  містить браузер загального призначення, а в безкоштовній версії — рекламу, тому чи
+  підходить застосунок дитині, вирішує батько або опікун; вміст сторонніх сайтів ми не
+  фільтруємо. Ми свідомо нічого не збираємо від дітей і не вважаємо застосунок дитячим
+  для цілей реклами. До нас у будь-якому разі безпосередньо не потрапляє нічого — див.
+  розділ 2.</p>
 
   <h2>8. Ваші можливості й як видалити дані</h2>
   <ul>
@@ -303,14 +389,21 @@ a{color:#2f6b3f}
     <li><b>Видалити все</b> — видаліть застосунок. Оскільки всі дані лежать у власному
     сховищі застосунку, його видалення видаляє їх повністю. На наших серверах не
     залишиться нічого, бо наших серверів немає.</li>
+    <li><b>Змінити свій вибір щодо реклами</b> — More → «Керування згодою» (рядок є в
+    ЄЕЗ, Великій Британії та Швейцарії) і Налаштування → Конфіденційність і безпека →
+    Відстеження на самому пристрої. Підписка Premium прибирає рекламу зовсім.</li>
   </ul>
   <p>Якщо ви перебуваєте в ЄС/ЄЕЗ або Великій Британії, GDPR дає вам права на доступ,
   виправлення, стирання, обмеження обробки, заперечення й перенесення даних. Ми можемо
   діяти лише щодо тих даних, які фактично маємо, — а це лише переписка, яку ви нам
   надіслали (розділ 5); правова підстава для її обробки — наш законний інтерес у
-  відповіді на звернення. Усе інше не покидає вашого пристрою, тобто ви й так керуєте
-  цим напряму. Якщо ви мешканець Каліфорнії: ми не продаємо й не передаємо персональну
-  інформацію в розумінні CCPA/CPRA — і насамперед ми її не збираємо.</p>
+  відповіді на звернення. Персоналізована реклама тримається на вашій згоді, яку ви даєте
+  у формі з розділу 4 і можете відкликати будь-коли; перевірка підписки — на потребі
+  виконати договір із вами. Усе інше не покидає вашого пристрою, тобто ви й так керуєте
+  цим напряму. Якщо ви мешканець Каліфорнії: передача вашого рекламного ідентифікатора до
+  Google для персоналізованої реклами є <b>«sharing»</b> для міжконтекстної поведінкової
+  реклами в розумінні CCPA/CPRA. Відмова у відстеженні або підписка Premium це припиняє.
+  Персональну інформацію за гроші ми не продаємо.</p>
 
   <h2>9. Безпека</h2>
   <p>Ваші файли й дані медіатеки лежать у приватному сховищі застосунку, захищеному
@@ -327,10 +420,12 @@ a{color:#2f6b3f}
   Console. Вимкнути це надсилання можна в налаштуваннях пристрою.</p>
 
   <h2>11. Зміни в цій політиці</h2>
-  <p>Якщо Tubik колись почне щось збирати — наприклад, якщо в наступній версії з'явиться
-  збір падінь — цю політику буде оновлено до випуску такої версії, і разом із нею буде
-  оновлено інформацію про конфіденційність у App Store. Дата вгорі показує, з якого числа
-  чинна ця редакція. Про суттєві зміни ми також напишемо в примітках до випуску.</p>
+  <p>Це редакція 2 цієї політики. Редакція 1 стверджувала, що Tubik не збирає нічого; це
+  перестало бути правдою, коли з'явилися реклама й підписка, і під них переписані розділи
+  2, 3, 4 та 8. Якщо зміниться щось іще — скажімо, додасться збір падінь, — політику буде
+  оновлено до випуску тієї версії, разом із нею оновиться інформація про конфіденційність
+  у App Store, а про суттєві зміни ми напишемо в примітках до випуску. Дата вгорі
+  показує, з якого числа чинна ця редакція.</p>
 
   <h2>12. Застосовне право</h2>
   <p>Ця політика регулюється правом <span class="fill">України</span>, без
@@ -340,7 +435,7 @@ a{color:#2f6b3f}
   <footer>
     <p><b>Контакт:</b> <span class="fill">nrg.ck.ua@gmail.com</span></p>
     <p><b>Опубліковано за адресою:</b> <span class="fill">https://airstep.github.io/tubik-privacy/</span></p>
-    <p>Tubik 1.0 · редакція 1 · чинна з <span class="fill">2 вересня 2026</span></p>
+    <p>Tubik 1.0 · редакція 2 · чинна з <span class="fill">3 вересня 2026</span></p>
   </footer>
 </section>
 
