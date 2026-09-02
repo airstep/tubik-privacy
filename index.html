@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tubik — Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f4f3f0;color:#1b1c1f;
+ font:400 16px/1.62 Manrope,system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px 90px}
+header{padding:52px 0 0}
+.brand{display:flex;align-items:center;gap:12px;margin-bottom:30px}
+.mark{width:38px;height:38px;border-radius:11px;background:linear-gradient(150deg,#C7E9A0,#4A5B33);
+ display:flex;align-items:flex-end;justify-content:center;gap:3px;padding-bottom:11px}
+.mark i{width:3px;border-radius:2px;background:rgba(13,15,20,.62);display:block}
+.brand b{font:800 19px Manrope;letter-spacing:-.2px}
+h1{font:800 clamp(30px,5vw,40px)/1.14 Manrope;letter-spacing:-.8px;margin:0 0 10px}
+.meta{font:400 13px JetBrains Mono,ui-monospace,monospace;color:#6a6a66;margin:0 0 34px}
+.meta span{background:#e5e3dd;padding:2px 6px;border-radius:4px}
+
+
+.langbar{display:flex;gap:8px;margin:0 0 34px}
+.langbar button{font:600 13.5px Manrope;padding:8px 16px;border-radius:999px;border:1px solid #cfcdc6;
+ background:#fff;color:#3a3a38;cursor:pointer}
+.langbar button.on{background:#1b1c1f;border-color:#1b1c1f;color:#fff}
+
+.tldr{border-left:3px solid #1b1c1f;padding:2px 0 2px 20px;margin:0 0 40px;font-size:17px;line-height:1.6}
+.tldr b{font-weight:700}
+
+h2{font:800 22px/1.28 Manrope;letter-spacing:-.3px;margin:44px 0 14px}
+h3{font:700 16.5px Manrope;margin:28px 0 8px}
+p{margin:0 0 14px}
+ul{margin:0 0 14px;padding-left:22px}
+li{margin:7px 0}
+li b{font-weight:600}
+.fill{font-weight:600}
+table{width:100%;border-collapse:collapse;margin:6px 0 20px;font-size:15px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid #ddd9d0;vertical-align:top}
+th{font:700 13px Manrope;text-transform:uppercase;letter-spacing:.06em;color:#5c5c58;
+ border-bottom:1px solid #bdbab2}
+td:first-child{width:38%;font-weight:600}
+.note{background:#eceae4;border-radius:9px;padding:15px 18px;margin:0 0 20px;font-size:15px;line-height:1.55}
+hr{border:0;border-top:1px solid #ddd9d0;margin:44px 0}
+footer{margin-top:46px;font-size:13.5px;color:#6a6a66}
+footer p{margin:0 0 7px}
+.hide{display:none}
+a{color:#2f6b3f}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="brand">
+    <div class="mark"><i style="height:7px"></i><i style="height:13px"></i><i style="height:9px"></i><i style="height:16px"></i><i style="height:11px"></i></div>
+    <b>Tubik</b>
+  </div>
+</header>
+
+
+<div class="langbar">
+  <button id="btn-en" class="on" onclick="setLang('en')">English</button>
+  <button id="btn-uk" onclick="setLang('uk')">Українська</button>
+</div>
+
+<!-- ============================== ENGLISH ============================== -->
+<section id="doc-en">
+  <h1>Privacy Policy</h1>
+  <p class="meta">Tubik for iOS and Android · version 1.0 · effective <span class="fill">2 September 2026</span></p>
+
+  <div class="tldr">
+    <b>Tubik collects nothing.</b> There is no account, no analytics, no advertising and
+    no tracking. Your music, your folders and your settings stay on your device. The app
+    connects to the internet only when you use its built-in browser or download a file
+    you chose yourself.
+  </div>
+
+  <h2>1. Who is responsible</h2>
+  <p>Tubik is published by <span class="fill">Taras Grygorovych Shevchenko, PE</span>. For anything about this
+  policy, write to <span class="fill">nrg.ck.ua@gmail.com</span>.</p>
+  <p>This policy applies to the Tubik mobile app. It does not apply to third-party
+  websites you open inside the app's browser — see section 6.</p>
+
+  <h2>2. What we collect about you</h2>
+  <p><b>Nothing.</b> Tubik has no servers of its own. It does not send us usage data,
+  device identifiers, diagnostics, crash reports, advertising IDs or your location.
+  There is no sign-up, no login and no user profile.</p>
+  <p>Because we receive no personal data, there is nothing for us to sell, share,
+  profile or retain. Version 1.0 contains no analytics SDK, no advertising SDK and no
+  crash-reporting SDK.</p>
+
+  <h2>3. What stays on your device</h2>
+  <p>Tubik stores the following inside its own app storage. It is visible only to Tubik,
+  it is not transmitted anywhere, and it is removed when you delete the app.</p>
+  <table>
+    <tr><th>Data</th><th>Why it exists</th></tr>
+    <tr><td>Audio files you import</td><td>So they can be played offline</td></tr>
+    <tr><td>Folder names and structure, track order</td><td>Your library organisation</td></tr>
+    <tr><td>Titles, artists, durations and cover art read from file tags</td><td>To show a readable list instead of file names</td></tr>
+    <tr><td>Playback queue and position, repeat and shuffle state, volume, speed</td><td>To resume where you stopped</td></tr>
+    <tr><td>Settings: theme, language, app icon, sleep timer default</td><td>Your preferences</td></tr>
+    <tr><td>Download history and status</td><td>To show progress and let you retry</td></tr>
+    <tr><td>Browser bookmarks and history</td><td>Features of the built-in browser</td></tr>
+    <tr><td>Cookies, caches and local storage created by websites you visit in the built-in browser</td><td>So sites work and you stay signed in where you signed in yourself</td></tr>
+  </table>
+
+  <h2>4. When Tubik connects to the internet</h2>
+  <p>Only in response to something you do. There is no background telemetry and no
+  periodic "phone home".</p>
+  <ul>
+    <li><b>You open a page in the built-in browser.</b> The request goes to that website.
+    It will see your IP address and whatever your browser sends, exactly as any browser
+    would.</li>
+    <li><b>You type a search term in the address bar.</b> The query is sent to
+    <b>DuckDuckGo</b>, the app's search provider, and is subject to
+    <a href="https://duckduckgo.com/privacy" rel="noopener">DuckDuckGo's privacy policy</a>.
+    A typed address is opened directly and is not sent to a search engine.</li>
+    <li><b>You download a file.</b> Tubik requests that URL from the server that hosts it.
+    That server sees your IP address.</li>
+  </ul>
+  <p>None of these requests pass through servers operated by
+  <span class="fill">Taras Grygorovych Shevchenko, PE</span>, and none of them are logged by us.</p>
+
+  <h2>5. If you write to us</h2>
+  <p>The <b>Email developer</b> link in the app opens your own mail app with a message
+  pre-filled with the app version and your device model, to save you looking them up.
+  Nothing is sent until you press send. If you do write, we receive your email address,
+  your message and that technical information, and we use it only to answer you. We keep
+  such correspondence no longer than needed to deal with it, and we do not use it for
+  marketing.</p>
+
+  <h2>6. Websites you open in the built-in browser</h2>
+  <p>The browser inside Tubik is a real browser: it runs the pages you open, including
+  their scripts, cookies and trackers. Those websites are independent of us and are
+  governed by their own privacy policies, not this one. We do not see, receive or control
+  what they collect.</p>
+  <p>You can clear everything those sites left behind at any time:
+  <b>Search → ··· → Clear History and Website Data</b>. That removes browsing history,
+  cookies, caches and site storage held by the app.</p>
+  <div class="note">
+    Tubik does not bypass DRM, paywalls or sign-in, and does not extract streams from
+    YouTube, SoundCloud or similar services. It lists direct audio links that a page
+    already exposes. Import only files you own or have permission to use.
+  </div>
+
+  <h2>7. Children</h2>
+  <p>Tubik is not directed at children and has no features aimed at them. Because the app
+  collects no personal data from anyone, it collects none from children either. It does
+  contain a general-purpose web browser, so a parent or guardian should decide whether the
+  app is appropriate. Content on third-party websites is not filtered by us.</p>
+
+  <h2>8. Your choices and how to delete your data</h2>
+  <ul>
+    <li><b>Delete individual tracks or folders</b> — in Media, using swipe or the
+    <b>···</b> menu. Deleting a folder deletes the files inside it, and the app tells you
+    how much will be removed before it does so.</li>
+    <li><b>Clear cover-art cache</b> — More → Media. Cover art is re-read from file tags
+    when needed, so nothing is permanently lost.</li>
+    <li><b>Clear browser data</b> — Search → ··· → Clear History and Website Data.</li>
+    <li><b>Remove everything</b> — delete the app. Because all data is inside the app's
+    own storage, deleting the app deletes all of it. There is nothing left on any server
+    of ours, because there is no server of ours.</li>
+  </ul>
+  <p>If you are in the EU/EEA or the UK, the GDPR gives you rights of access, correction,
+  erasure, restriction, objection and portability. We can only act on data we actually
+  hold, which is limited to correspondence you send us (section 5); the legal basis for
+  handling that is our legitimate interest in answering support requests. For everything
+  else, the data never leaves your device, so you already control it directly. If you are
+  a California resident, we do not sell or share personal information as those terms are
+  defined by the CCPA/CPRA, and we do not collect it in the first place.</p>
+
+  <h2>9. Security</h2>
+  <p>Your files and library data live in the app's private storage, protected by the
+  operating system's sandbox and by your device passcode and encryption. Because nothing
+  is transmitted to us, there is no server-side copy to be breached. Network requests to
+  websites and download servers use HTTPS wherever the remote server offers it.</p>
+
+  <h2>10. Diagnostics shared through Apple or Google</h2>
+  <p>Independently of Tubik, iOS and Android can send crash diagnostics to app developers
+  if you turned that sharing on in your operating system settings. This is handled by
+  Apple or Google under their own policies, not by us. Such reports contain technical
+  crash information, and we may view them in App Store Connect or Google Play Console.
+  You can turn that sharing off in your device settings.</p>
+
+  <h2>11. Changes to this policy</h2>
+  <p>If Tubik ever starts collecting anything — for example if crash reporting is added in
+  a later version — this policy will be updated before that version is released, and the
+  App Store privacy information will be updated with it. The effective date at the top
+  shows when this version took effect. Material changes will also be noted in the app's
+  release notes.</p>
+
+  <h2>12. Governing law</h2>
+  <p>This policy is governed by the laws of <span class="fill">Ukraine</span>,
+  without prejudice to any mandatory consumer-protection rights you have where you live.</p>
+
+  <hr>
+  <footer>
+    <p><b>Contact:</b> <span class="fill">nrg.ck.ua@gmail.com</span></p>
+    <p><b>Published at:</b> <span class="fill">https://airstep.github.io/tubik-privacy/</span></p>
+    <p>Tubik 1.0 · policy version 1 · effective <span class="fill">2 September 2026</span></p>
+  </footer>
+</section>
+
+<!-- ============================== УКРАЇНСЬКА ============================== -->
+<section id="doc-uk" class="hide">
+  <h1>Політика конфіденційності</h1>
+  <p class="meta">Tubik для iOS та Android · версія 1.0 · чинна з <span class="fill">2 вересня 2026</span></p>
+
+  <div class="tldr">
+    <b>Tubik не збирає нічого.</b> Немає ні акаунта, ні аналітики, ні реклами, ні
+    відслідковування. Ваша музика, теки й налаштування залишаються на пристрої.
+    Застосунок виходить у мережу лише тоді, коли ви користуєтесь вбудованим браузером
+    або завантажуєте файл, який обрали самі.
+  </div>
+
+  <h2>1. Хто відповідальний</h2>
+  <p>Застосунок Tubik публікує <span class="fill">Taras Grygorovych Shevchenko, PE</span>. З будь-яких питань
+  щодо цієї політики пишіть на <span class="fill">nrg.ck.ua@gmail.com</span>.</p>
+  <p>Політика стосується мобільного застосунку Tubik. Вона не стосується сторонніх
+  сайтів, які ви відкриваєте у вбудованому браузері — див. розділ 6.</p>
+
+  <h2>2. Які дані ми про вас збираємо</h2>
+  <p><b>Жодних.</b> У Tubik немає власних серверів. Застосунок не надсилає нам даних про
+  використання, ідентифікаторів пристрою, діагностики, звітів про падіння, рекламних
+  ідентифікаторів чи вашого місцезнаходження. Немає реєстрації, входу й профілю
+  користувача.</p>
+  <p>Оскільки ми не отримуємо персональних даних, нам нічого продавати, передавати,
+  профілювати чи зберігати. У версії 1.0 немає ні аналітичного, ні рекламного SDK, ні
+  SDK для збору падінь.</p>
+
+  <h2>3. Що залишається на вашому пристрої</h2>
+  <p>Перелічене нижче зберігається у власному сховищі застосунку. Воно доступне лише
+  Tubik, нікуди не передається й зникає, коли ви видаляєте застосунок.</p>
+  <table>
+    <tr><th>Дані</th><th>Для чого</th></tr>
+    <tr><td>Аудіофайли, які ви імпортували</td><td>Щоб їх можна було слухати офлайн</td></tr>
+    <tr><td>Назви й структура тек, порядок треків</td><td>Організація вашої медіатеки</td></tr>
+    <tr><td>Назви, виконавці, тривалість і обкладинки з тегів файлів</td><td>Щоб показувати читабельний список замість імен файлів</td></tr>
+    <tr><td>Черга й позиція відтворення, повтор і перемішування, гучність, швидкість</td><td>Щоб продовжити з того місця, де ви зупинились</td></tr>
+    <tr><td>Налаштування: тема, мова, іконка, таймер сну за замовчуванням</td><td>Ваші налаштування</td></tr>
+    <tr><td>Історія й стан завантажень</td><td>Щоб показувати прогрес і давати повторити</td></tr>
+    <tr><td>Закладки й історія браузера</td><td>Функції вбудованого браузера</td></tr>
+    <tr><td>Cookies, кеші й локальні дані сайтів, які ви відкривали у вбудованому браузері</td><td>Щоб сайти працювали й щоб ви лишались авторизовані там, де увійшли самі</td></tr>
+  </table>
+
+  <h2>4. Коли Tubik виходить у мережу</h2>
+  <p>Лише у відповідь на вашу дію. Немає фонової телеметрії й немає періодичних звернень
+  «додому».</p>
+  <ul>
+    <li><b>Ви відкриваєте сторінку у вбудованому браузері.</b> Запит іде на цей сайт. Він
+    бачить вашу IP-адресу й те, що зазвичай надсилає браузер — так само, як у будь-якому
+    браузері.</li>
+    <li><b>Ви вводите пошуковий запит в адресний рядок.</b> Запит надсилається до
+    <b>DuckDuckGo</b> — пошуковика застосунку — і підпадає під
+    <a href="https://duckduckgo.com/privacy" rel="noopener">політику конфіденційності DuckDuckGo</a>.
+    Введена адреса відкривається напряму й до пошуковика не надсилається.</li>
+    <li><b>Ви завантажуєте файл.</b> Tubik звертається за цим посиланням до сервера, який
+    його роздає. Той сервер бачить вашу IP-адресу.</li>
+  </ul>
+  <p>Жоден із цих запитів не проходить через сервери
+  <span class="fill">Taras Grygorovych Shevchenko, PE</span> і не журналюється нами.</p>
+
+  <h2>5. Якщо ви нам напишете</h2>
+  <p>Кнопка <b>Email developer</b> у застосунку відкриває ваш власний почтовий клієнт із
+  листом, у якому вже підставлені версія застосунку й модель пристрою — щоб вам не
+  доводилось їх шукати. Нічого не надсилається, поки ви не натиснете «Надіслати». Якщо ви
+  напишете, ми отримаємо вашу e-mail адресу, текст листа й цю технічну інформацію, і
+  використаємо їх лише щоб вам відповісти. Таку переписку ми зберігаємо не довше, ніж
+  потрібно для розгляду звернення, і не використовуємо для маркетингу.</p>
+
+  <h2>6. Сайти, які ви відкриваєте у вбудованому браузері</h2>
+  <p>Браузер усередині Tubik — це справжній браузер: він виконує сторінки, які ви
+  відкриваєте, разом із їхніми скриптами, cookies і трекерами. Ці сайти від нас не
+  залежать і керуються власними політиками, а не цією. Ми не бачимо, не отримуємо й не
+  контролюємо те, що вони збирають.</p>
+  <p>Усе, що залишили по собі ці сайти, можна прибрати будь-коли:
+  <b>Search → ··· → Clear History and Website Data</b>. Це видаляє історію, cookies,
+  кеші й локальні дані сайтів, які зберігає застосунок.</p>
+  <div class="note">
+    Tubik не обходить DRM, платні стіни й авторизацію, і не витягує потоки з YouTube,
+    SoundCloud та подібних сервісів. Він показує прямі посилання на аудіо, які сторінка
+    вже віддає відкрито. Імпортуйте лише ті файли, якими ви володієте або маєте дозвіл
+    користуватись.
+  </div>
+
+  <h2>7. Діти</h2>
+  <p>Tubik не орієнтований на дітей і не має функцій, призначених для них. Оскільки
+  застосунок не збирає персональних даних ні від кого, він не збирає їх і від дітей.
+  Водночас він містить браузер загального призначення, тому чи підходить застосунок
+  дитині — вирішує батько або опікун. Вміст сторонніх сайтів ми не фільтруємо.</p>
+
+  <h2>8. Ваші можливості й як видалити дані</h2>
+  <ul>
+    <li><b>Видалити окремі треки або теки</b> — на екрані Media, свайпом або через меню
+    <b>···</b>. Видалення теки видаляє файли всередині, і застосунок наперед показує, що
+    саме й скільки зникне.</li>
+    <li><b>Очистити кеш обкладинок</b> — More → Media. Обкладинки перечитуються з тегів
+    файлів за потреби, тому нічого не втрачається безповоротно.</li>
+    <li><b>Очистити дані браузера</b> — Search → ··· → Clear History and Website Data.</li>
+    <li><b>Видалити все</b> — видаліть застосунок. Оскільки всі дані лежать у власному
+    сховищі застосунку, його видалення видаляє їх повністю. На наших серверах не
+    залишиться нічого, бо наших серверів немає.</li>
+  </ul>
+  <p>Якщо ви перебуваєте в ЄС/ЄЕЗ або Великій Британії, GDPR дає вам права на доступ,
+  виправлення, стирання, обмеження обробки, заперечення й перенесення даних. Ми можемо
+  діяти лише щодо тих даних, які фактично маємо, — а це лише переписка, яку ви нам
+  надіслали (розділ 5); правова підстава для її обробки — наш законний інтерес у
+  відповіді на звернення. Усе інше не покидає вашого пристрою, тобто ви й так керуєте
+  цим напряму. Якщо ви мешканець Каліфорнії: ми не продаємо й не передаємо персональну
+  інформацію в розумінні CCPA/CPRA — і насамперед ми її не збираємо.</p>
+
+  <h2>9. Безпека</h2>
+  <p>Ваші файли й дані медіатеки лежать у приватному сховищі застосунку, захищеному
+  пісочницею операційної системи, а також кодом доступу й шифруванням вашого пристрою.
+  Оскільки нам нічого не передається, немає й серверної копії, яку можна було б викрасти.
+  Запити до сайтів і серверів завантаження йдуть через HTTPS усюди, де віддалений сервер
+  його підтримує.</p>
+
+  <h2>10. Діагностика через Apple або Google</h2>
+  <p>Незалежно від Tubik, iOS та Android можуть надсилати розробникам діагностику падінь,
+  якщо ви увімкнули таке надсилання в налаштуваннях операційної системи. Цим керують
+  Apple або Google за власними політиками, а не ми. Такі звіти містять технічну
+  інформацію про падіння, і ми можемо бачити їх у App Store Connect або Google Play
+  Console. Вимкнути це надсилання можна в налаштуваннях пристрою.</p>
+
+  <h2>11. Зміни в цій політиці</h2>
+  <p>Якщо Tubik колись почне щось збирати — наприклад, якщо в наступній версії з'явиться
+  збір падінь — цю політику буде оновлено до випуску такої версії, і разом із нею буде
+  оновлено інформацію про конфіденційність у App Store. Дата вгорі показує, з якого числа
+  чинна ця редакція. Про суттєві зміни ми також напишемо в примітках до випуску.</p>
+
+  <h2>12. Застосовне право</h2>
+  <p>Ця політика регулюється правом <span class="fill">України</span>, без
+  обмеження ваших обов'язкових прав споживача за місцем проживання.</p>
+
+  <hr>
+  <footer>
+    <p><b>Контакт:</b> <span class="fill">nrg.ck.ua@gmail.com</span></p>
+    <p><b>Опубліковано за адресою:</b> <span class="fill">https://airstep.github.io/tubik-privacy/</span></p>
+    <p>Tubik 1.0 · редакція 1 · чинна з <span class="fill">2 вересня 2026</span></p>
+  </footer>
+</section>
+
+</div>
+<script>
+function setLang(l){
+  document.getElementById('doc-en').classList.toggle('hide', l!=='en');
+  document.getElementById('doc-uk').classList.toggle('hide', l!=='uk');
+  document.getElementById('btn-en').classList.toggle('on', l==='en');
+  document.getElementById('btn-uk').classList.toggle('on', l==='uk');
+  document.documentElement.lang = l;
+  window.scrollTo(0,0);
+}
+</script>
+</body>
+</html>
