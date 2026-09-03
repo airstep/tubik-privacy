@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tubik — Offline Music Player</title>
+<meta name="description" content="Tubik is an offline music player for iOS. Your own audio files, your own folders, played on your device. No account, no catalogue, no streaming.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f4f3f0;color:#1b1c1f;
+ font:400 16px/1.62 Manrope,system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px 90px}
+header{padding:52px 0 0}
+.brand{display:flex;align-items:center;gap:12px;margin-bottom:30px}
+.mark{width:38px;height:38px;border-radius:11px;background:linear-gradient(150deg,#C7E9A0,#4A5B33);
+ display:flex;align-items:flex-end;justify-content:center;gap:3px;padding-bottom:11px}
+.mark i{width:3px;border-radius:2px;background:rgba(13,15,20,.62);display:block}
+.brand b{font:800 19px Manrope;letter-spacing:-.2px}
+h1{font:800 clamp(30px,5vw,40px)/1.14 Manrope;letter-spacing:-.8px;margin:0 0 10px}
+.meta{font:400 13px JetBrains Mono,ui-monospace,monospace;color:#6a6a66;margin:0 0 34px}
+.meta span{background:#e5e3dd;padding:2px 6px;border-radius:4px}
+
+.langbar{display:flex;gap:8px;margin:0 0 34px}
+.langbar button{font:600 13.5px Manrope;padding:8px 16px;border-radius:999px;border:1px solid #cfcdc6;
+ background:#fff;color:#3a3a38;cursor:pointer}
+.langbar button.on{background:#1b1c1f;border-color:#1b1c1f;color:#fff}
+
+.tldr{border-left:3px solid #1b1c1f;padding:2px 0 2px 20px;margin:0 0 40px;font-size:17px;line-height:1.6}
+.tldr b{font-weight:700}
+
+h2{font:800 22px/1.28 Manrope;letter-spacing:-.3px;margin:44px 0 14px}
+h3{font:700 16.5px Manrope;margin:28px 0 8px}
+p{margin:0 0 14px}
+ul{margin:0 0 14px;padding-left:22px}
+li{margin:7px 0}
+li b{font-weight:600}
+.fill{font-weight:600}
+.note{background:#eceae4;border-radius:9px;padding:15px 18px;margin:0 0 20px;font-size:15px;line-height:1.55}
+hr{border:0;border-top:1px solid #ddd9d0;margin:44px 0}
+footer{margin-top:46px;font-size:13.5px;color:#6a6a66}
+footer p{margin:0 0 7px}
+.hide{display:none}
+a{color:#2f6b3f}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="brand">
+    <div class="mark"><i style="height:7px"></i><i style="height:13px"></i><i style="height:9px"></i><i style="height:16px"></i><i style="height:11px"></i></div>
+    <b>Tubik</b>
+  </div>
+</header>
+
+<div class="langbar">
+  <button id="btn-en" class="on" onclick="setLang('en')">English</button>
+  <button id="btn-uk" onclick="setLang('uk')">Українська</button>
+</div>
+
+<!-- ============================== ENGLISH ============================== -->
+<section id="doc-en">
+  <h1>An offline player for the music you already have</h1>
+  <p class="meta">Tubik for iOS · version <span class="fill">1.0</span> · currently in TestFlight</p>
+
+  <div class="tldr">
+    <b>Your files, your folders, your device.</b> Tubik plays the audio you put on your
+    phone — imported from Files, iCloud Drive or any app that can share a file. It has no
+    catalogue, no feed and no account. Nothing about your library leaves the device.
+  </div>
+
+  <h2>What it does</h2>
+  <ul>
+    <li><b>Imports your own audio.</b> Pick files through the system picker and they land
+    in your library, tags and artwork read on the spot.</li>
+    <li><b>Folders that make sense to you.</b> Arrange tracks the way you arrange them on
+    a disk, not the way an algorithm thinks you should.</li>
+    <li><b>Plays in the background.</b> Lock screen, Control Centre, headphone buttons and
+    CarPlay-style remote controls all work.</li>
+    <li><b>Works with no signal.</b> Everything is local, so a plane, a metro tunnel or a
+    dead SIM changes nothing.</li>
+    <li><b>Downloads direct audio links.</b> Open a page in the built-in browser and Tubik
+    lists the direct audio files it finds there, so you can save your own material without
+    a laptop.</li>
+    <li><b>Two full themes.</b> <b>Sage</b>, warm and matte, and <b>Glass</b>, dark and
+    translucent. Both are complete designs, not a colour switch.</li>
+    <li><b>No account.</b> No sign-up, no email, no profile. Install and play.</li>
+  </ul>
+
+  <h2>Premium</h2>
+  <p>Tubik is free and fully functional. The free version shows ads between actions —
+  never over playback controls, never over the browser. <b>Premium removes them</b>, along
+  with the network requests behind them. Everything else is identical: no feature is held
+  back, no library limit, no export lock. If you never subscribe, you never lose anything
+  you had.</p>
+
+  <h2>What Tubik does not do</h2>
+  <div class="note">
+    <p>Tubik plays audio files that are on this device. It can also open a web page and
+    list the direct audio links it finds there.</p>
+    <p>It does not bypass DRM, paywalls or sign-in. It does not extract audio from
+    streaming services. It has no catalogue of its own and does not search for music.</p>
+    <p style="margin:0">Import only files you own or have permission to use.</p>
+  </div>
+  <p>This is printed inside the app as well, and it is not marketing hedging — it is what
+  the app is. If you are looking for a way to take audio out of a streaming service, Tubik
+  is the wrong app.</p>
+
+  <h2>Privacy</h2>
+  <p>Your music, your folders and your settings stay on the device. There is no analytics
+  and no user profile. Two things do leave: the ads that Google selects in the free
+  version, and a check that tells the app whether your subscription is active. The
+  details, in full, are in the
+  <a href="./">privacy policy</a>.</p>
+
+  <h2>Support</h2>
+  <p>Write to <span class="fill">nrg.ck.ua@gmail.com</span>. Bug reports, feature
+  requests and complaints all go to the same place, and a person reads them.</p>
+
+  <hr>
+  <footer>
+    <p><b>Publisher:</b> <span class="fill">Taras Grygorovych Shevchenko, PE</span></p>
+    <p><b>Contact:</b> <span class="fill">nrg.ck.ua@gmail.com</span></p>
+    <p><a href="./">Privacy policy</a></p>
+  </footer>
+</section>
+
+<!-- ============================== УКРАЇНСЬКА ============================== -->
+<section id="doc-uk" class="hide">
+  <h1>Офлайн-плеєр для музики, яка вже у вас є</h1>
+  <p class="meta">Tubik для iOS · версія <span class="fill">1.0</span> · зараз у TestFlight</p>
+
+  <div class="tldr">
+    <b>Ваші файли, ваші теки, ваш пристрій.</b> Tubik програє аудіо, яке ви поклали в
+    телефон, — з «Файлів», iCloud Drive чи будь-якого застосунку, що вміє поділитися
+    файлом. Каталогу, стрічки й акаунта тут немає. Про вашу фонотеку не дізнається ніхто.
+  </div>
+
+  <h2>Що він уміє</h2>
+  <ul>
+    <li><b>Імпортує ваше аудіо.</b> Вибираєте файли системним пікером — вони одразу в
+    бібліотеці, з тегами й обкладинками.</li>
+    <li><b>Теки, зрозумілі вам.</b> Розкладаєте треки так, як розклали б на диску, а не
+    так, як вирішив алгоритм.</li>
+    <li><b>Грає у фоні.</b> Екран блокування, Пункт керування, кнопки на навушниках і
+    керування з автомобільної магнітоли — усе працює.</li>
+    <li><b>Не потребує мережі.</b> Усе локальне, тож літак, тунель метро чи мертва SIM
+    нічого не міняють.</li>
+    <li><b>Завантажує прямі аудіопосилання.</b> Відкриваєте сторінку у вбудованому
+    браузері — Tubik перелічує прямі аудіофайли, які на ній знайшов, і ви зберігаєте свій
+    матеріал без ноутбука.</li>
+    <li><b>Дві повноцінні теми.</b> <b>Sage</b>, тепла й матова, і <b>Glass</b>, темна й
+    напівпрозора. Обидві — цілісний дизайн, а не перемикач кольору.</li>
+    <li><b>Без акаунта.</b> Ні реєстрації, ні пошти, ні профілю. Встановили — граєте.</li>
+  </ul>
+
+  <h2>Premium</h2>
+  <p>Tubik безкоштовний і повністю робочий. У безкоштовній версії між діями показується
+  реклама — ніколи поверх керування відтворенням і ніколи поверх браузера.
+  <b>Premium її прибирає</b> разом із мережевими запитами, які за нею стоять. Решта
+  однакова: жодна функція не притримана, ліміту бібліотеки немає, експорт не замкнений.
+  Якщо ви ніколи не оформите підписку, ви нічого не втратите.</p>
+
+  <h2>Чого Tubik не робить</h2>
+  <div class="note">
+    <p>Tubik програє аудіофайли, які є на цьому пристрої. Він також може відкрити
+    вебсторінку й перелічити прямі аудіопосилання, які на ній знайде.</p>
+    <p>Він не обходить DRM, платні стіни чи авторизацію. Він не витягує потоки зі
+    стрімінгових сервісів. Власного каталогу він не має й музику не шукає.</p>
+    <p style="margin:0">Імпортуйте лише ті файли, якими володієте або маєте право
+    користуватись.</p>
+  </div>
+  <p>Те саме написано всередині застосунку, і це не маркетингова обережність — це те, чим
+  застосунок є. Якщо ви шукаєте спосіб дістати аудіо зі стрімінгового сервісу, Tubik вам
+  не підходить.</p>
+
+  <h2>Конфіденційність</h2>
+  <p>Ваша музика, ваші теки й ваші налаштування лишаються на пристрої. Аналітики й профілю
+  користувача немає. Назовні йдуть дві речі: реклама, яку в безкоштовній версії добирає
+  Google, і перевірка, чи активна ваша підписка. Подробиці — повністю — у
+  <a href="./">політиці конфіденційності</a>.</p>
+
+  <h2>Підтримка</h2>
+  <p>Пишіть на <span class="fill">nrg.ck.ua@gmail.com</span>. Звіти про помилки, побажання
+  й скарги йдуть в одне місце, і їх читає людина.</p>
+
+  <hr>
+  <footer>
+    <p><b>Видавець:</b> <span class="fill">ФОП Шевченко Тарас Григорович</span></p>
+    <p><b>Контакт:</b> <span class="fill">nrg.ck.ua@gmail.com</span></p>
+    <p><a href="./">Політика конфіденційності</a></p>
+  </footer>
+</section>
+
+</div>
+<script>
+function setLang(l){
+  document.getElementById('doc-en').classList.toggle('hide', l!=='en');
+  document.getElementById('doc-uk').classList.toggle('hide', l!=='uk');
+  document.getElementById('btn-en').classList.toggle('on', l==='en');
+  document.getElementById('btn-uk').classList.toggle('on', l==='uk');
+  document.documentElement.lang = l;
+  window.scrollTo(0,0);
+}
+</script>
+</body>
+</html>
