@@ -73,7 +73,7 @@ a{color:#2f6b3f}
 
   <div class="tldr">
     <b>Your music, your folders and your settings stay on your device.</b> There is no
-    account and no analytics. Two things do leave it: in the free version Tubik shows ads,
+    account, and we run no analytics of our own. Two things do leave it: in the free version Tubik shows ads,
     which Google selects, and a check that tells the app whether your subscription is
     active. Premium removes those ads and the requests behind them. Websites you open in
     the built-in browser carry their own ads and trackers — those are theirs, not ours,
@@ -95,7 +95,12 @@ a{color:#2f6b3f}
     <li><b>Google AdMob</b>, to select and measure the ads. It receives your device
     advertising identifier — only if you allow tracking when iOS asks — your IP address
     and the approximate region derived from it, your device model and system version, and
-    which ads you were shown or tapped. If you decline tracking, that identifier is not
+    which ads you were shown or tapped. Google also records how its own advertising SDK
+    behaved inside the app — delivery errors, timings and similar diagnostics — and counts
+    those views and taps as product interaction. That is why the App Store privacy
+    information for Tubik lists <b>Product Interaction</b> and <b>Diagnostics</b>: Google
+    collects them, we never see them, and no such report is sent to us. If you decline
+    tracking, that identifier is not
     shared and the ads become non-personalised. Google acts under its
     <a href="https://policies.google.com/privacy" rel="noopener">own privacy policy</a>.
     Its consent form, shown in Europe, also mentions precise location, because its
@@ -126,11 +131,11 @@ a{color:#2f6b3f}
     <tr><th>Data</th><th>Why it exists</th></tr>
     <tr><td>Audio files you import</td><td>So they can be played offline</td></tr>
     <tr><td>Folder names and structure, track order</td><td>Your library organisation</td></tr>
-    <tr><td>Titles, artists, durations and cover art read from file tags</td><td>To show a readable list instead of file names</td></tr>
+    <tr><td>Titles, artists, durations and cover art — read from file tags, or, for a track saved from a page, cached from the cover the page itself displayed (section 4)</td><td>To show a readable list instead of file names</td></tr>
     <tr><td>Playback queue and position, repeat and shuffle state, volume, speed</td><td>To resume where you stopped</td></tr>
     <tr><td>Settings: theme, language, app icon, sleep timer default</td><td>Your preferences</td></tr>
     <tr><td>Download history and status</td><td>To show progress and let you retry</td></tr>
-    <tr><td>Browser bookmarks and history</td><td>Features of the built-in browser</td></tr>
+    <tr><td>Browser bookmarks and history, and the site icons cached for them</td><td>Features of the built-in browser</td></tr>
     <tr><td>Cookies, caches and local storage created by websites you visit in the built-in browser</td><td>So sites work and you stay signed in where you signed in yourself</td></tr>
     <tr><td>Your advertising consent answer, and the counters that keep ads apart</td><td>Including the moment until which ads are paused after you watch a rewarded video</td></tr>
     <tr><td>The last known state of your subscription</td><td>So Premium keeps working while you are offline</td></tr>
@@ -142,7 +147,13 @@ a{color:#2f6b3f}
   <ul>
     <li><b>You open a page in the built-in browser.</b> The request goes to that website.
     It will see your IP address and whatever your browser sends, exactly as any browser
-    would.</li>
+    would. Adding that page to bookmarks caches its site icon from the same website, so
+    the bookmark shows it later without the network.</li>
+    <li><b>A page you are browsing shows cover art next to a track.</b> Tubik caches that
+    image from the same website — while the list of found tracks is on screen, and again
+    for a track you save — so your library shows a cover offline. That website sees your
+    IP address exactly as in the first case, nothing about you is added to the request,
+    and the image stays on your device.</li>
     <li><b>You type a search term in the address bar.</b> The query is sent to
     <b>DuckDuckGo</b>, the app's search provider, and is subject to
     <a href="https://duckduckgo.com/privacy" rel="noopener">DuckDuckGo's privacy policy</a>.
@@ -207,7 +218,8 @@ a{color:#2f6b3f}
     <li><b>Clear browser data</b> — Search → ··· → Clear History and Website Data.</li>
     <li><b>Remove everything</b> — delete the app. Because all data is inside the app's
     own storage, deleting the app deletes all of it. There is nothing left on any server
-    of ours, because there is no server of ours.</li>
+    of ours, because there is no server of ours. Copies you exported or shared yourself
+    live outside the app and stay where you put them.</li>
     <li><b>Change your advertising choices</b> — More → Manage consent, shown in the EEA,
     the UK and Switzerland; and Settings → Privacy &amp; Security → Tracking on the device
     itself. A Premium subscription removes the ads altogether.</li>
@@ -264,7 +276,7 @@ a{color:#2f6b3f}
 
   <div class="tldr">
     <b>Ваша музика, теки й налаштування залишаються на пристрої.</b> Немає ні акаунта, ні
-    аналітики. Пристрій покидають дві речі: у безкоштовній версії Tubik показує рекламу,
+    власної аналітики. Пристрій покидають дві речі: у безкоштовній версії Tubik показує рекламу,
     яку добирає Google, і перевірку, що каже застосунку, чи чинна ваша підписка. Premium
     прибирає цю рекламу й запити за нею. Сайти, які ви відкриваєте у вбудованому браузері,
     несуть власну рекламу й трекери — вони їхні, не наші, і Premium їх не стосується.
@@ -285,7 +297,12 @@ a{color:#2f6b3f}
     <li><b>Google AdMob</b> — щоб дібрати рекламу й порахувати покази. Отримує рекламний
     ідентифікатор вашого пристрою (тільки якщо ви дозволили відстеження, коли про це
     запитала iOS), вашу IP-адресу й приблизний регіон із неї, модель пристрою й версію
-    системи, а також те, яку рекламу вам показали й на що ви натиснули. Якщо ви відмовили
+    системи, а також те, яку рекламу вам показали й на що ви натиснули. Google також
+    фіксує, як усередині застосунку поводився його рекламний SDK — помилки доставки,
+    тайминги й подібну діагностику, — а самі покази й натискання зараховує як взаємодію
+    з продуктом. Саме тому в інформації про конфіденційність Tubik в App Store перелічені
+    <b>Product Interaction</b> і <b>Diagnostics</b>: їх збирає Google, ми їх не бачимо,
+    і жодного такого звіту нам не надходить. Якщо ви відмовили
     у відстеженні, ідентифікатор не передається, а реклама стає неперсоналізованою. Google
     діє за <a href="https://policies.google.com/privacy" rel="noopener">власною політикою
     конфіденційності</a>. Її форма згоди, яку показують у Європі, згадує ще й точне
@@ -316,11 +333,11 @@ a{color:#2f6b3f}
     <tr><th>Дані</th><th>Для чого</th></tr>
     <tr><td>Аудіофайли, які ви імпортували</td><td>Щоб їх можна було слухати офлайн</td></tr>
     <tr><td>Назви й структура тек, порядок треків</td><td>Організація вашої медіатеки</td></tr>
-    <tr><td>Назви, виконавці, тривалість і обкладинки з тегів файлів</td><td>Щоб показувати читабельний список замість імен файлів</td></tr>
+    <tr><td>Назви, виконавці, тривалість і обкладинки — з тегів файлів, а для треку, збереженого зі сторінки, ще й обкладинка, яку показувала сама сторінка (розділ 4)</td><td>Щоб показувати читабельний список замість імен файлів</td></tr>
     <tr><td>Черга й позиція відтворення, повтор і перемішування, гучність, швидкість</td><td>Щоб продовжити з того місця, де ви зупинились</td></tr>
     <tr><td>Налаштування: тема, мова, іконка, таймер сну за замовчуванням</td><td>Ваші налаштування</td></tr>
     <tr><td>Історія й стан завантажень</td><td>Щоб показувати прогрес і давати повторити</td></tr>
-    <tr><td>Закладки й історія браузера</td><td>Функції вбудованого браузера</td></tr>
+    <tr><td>Закладки й історія браузера та збережені для них іконки сайтів</td><td>Функції вбудованого браузера</td></tr>
     <tr><td>Cookies, кеші й локальні дані сайтів, які ви відкривали у вбудованому браузері</td><td>Щоб сайти працювали й щоб ви лишались авторизовані там, де увійшли самі</td></tr>
     <tr><td>Вашу відповідь у формі згоди на рекламу й лічильники, які розводять покази в часі</td><td>Зокрема момент, до якого реклама на паузі після перегляду ролика з винагородою</td></tr>
     <tr><td>Останній відомий стан вашої підписки</td><td>Щоб Premium працював і без мережі</td></tr>
@@ -332,7 +349,13 @@ a{color:#2f6b3f}
   <ul>
     <li><b>Ви відкриваєте сторінку у вбудованому браузері.</b> Запит іде на цей сайт. Він
     бачить вашу IP-адресу й те, що зазвичай надсилає браузер — так само, як у будь-якому
-    браузері.</li>
+    браузері. Коли ви додаєте сторінку в закладки, з того самого сайту зберігається його
+    іконка, щоб закладка показувала її й без мережі.</li>
+    <li><b>Сторінка, яку ви переглядаєте, показує обкладинку поруч із треком.</b> Tubik
+    зберігає цю картинку з того самого сайту — поки на екрані список знайденого і ще раз
+    для треку, який ви зберігаєте, — щоб у медіатеці була обкладинка й офлайн. Той сайт
+    бачить вашу IP-адресу так само, як у першому випадку, нічого про вас до запиту не
+    додається, а картинка залишається на вашому пристрої.</li>
     <li><b>Ви вводите пошуковий запит в адресний рядок.</b> Запит надсилається до
     <b>DuckDuckGo</b> — пошуковика застосунку — і підпадає під
     <a href="https://duckduckgo.com/privacy" rel="noopener">політику конфіденційності DuckDuckGo</a>.
@@ -397,7 +420,8 @@ a{color:#2f6b3f}
     <li><b>Очистити дані браузера</b> — Search → ··· → Clear History and Website Data.</li>
     <li><b>Видалити все</b> — видаліть застосунок. Оскільки всі дані лежать у власному
     сховищі застосунку, його видалення видаляє їх повністю. На наших серверах не
-    залишиться нічого, бо наших серверів немає.</li>
+    залишиться нічого, бо наших серверів немає. Копії, які ви експортували чи надіслали
+    самі, живуть поза застосунком і залишаються там, куди ви їх поклали.</li>
     <li><b>Змінити свій вибір щодо реклами</b> — More → «Керування згодою» (рядок є в
     ЄЕЗ, Великій Британії та Швейцарії) і Налаштування → Конфіденційність і безпека →
     Відстеження на самому пристрої. Підписка Premium прибирає рекламу зовсім.</li>
