@@ -6,6 +6,7 @@
 |---|---|---|
 | `index.html` | <https://airstep.github.io/tubik-privacy/> | політика конфіденційності — Privacy Policy URL в App Store Connect, посилання у формі згоди AdMob, `kPrivacyPolicyUrl` |
 | `marketing.html` | <https://airstep.github.io/tubik-privacy/marketing.html> | сторінка застосунку — Marketing URL в App Store Connect |
+| `support.html` | <https://airstep.github.io/tubik-privacy/support.html> | підтримка — Support URL в App Store Connect, обов'язковий для сабміту |
 
 ## Чому окремий репозиторій
 
@@ -48,6 +49,7 @@ Connect теж має бути публічним, а заводити під о
 | перша збірка з живим AdMob | ті самі розділи: IDFA, рекламні ідентифікатори, «Used to Track You» |
 | додавання Sentry (M9) | розділ про діагностику + privacy-мітки в App Store Connect, **до** публікації тієї збірки: мітки не міняються без сабміту |
 | реліз у App Store | `marketing.html`: рядок «currently in TestFlight» / «зараз у TestFlight» і посилання на сторінку в сторі |
+| перейменування рядків у More | `support.html`: сторінка веде людину по підписах з екрана (`More → Відновити покупки`, `More → Сховище`, `More → Експортувати бібліотеку`). Підпис, якого в застосунку вже немає, — це інструкція в нікуди |
 
 Дата в шапці (`effective`) і `policy version` у футері оновлюються разом із
 текстом. Стара редакція лишається в git-історії — цього достатньо.

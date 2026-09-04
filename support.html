@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tubik — Support</title>
+<meta name="description" content="Support for Tubik, an offline music player for iOS: how to add your files, playback, subscriptions and refunds, the built-in browser, and how to report a problem.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f4f3f0;color:#1b1c1f;
+ font:400 16px/1.62 Manrope,system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px 90px}
+header{padding:52px 0 0}
+.brand{display:flex;align-items:center;gap:12px;margin-bottom:30px}
+.mark{width:38px;height:38px;border-radius:11px;background:linear-gradient(150deg,#C7E9A0,#4A5B33);
+ display:flex;align-items:flex-end;justify-content:center;gap:3px;padding-bottom:11px}
+.mark i{width:3px;border-radius:2px;background:rgba(13,15,20,.62);display:block}
+.brand b{font:800 19px Manrope;letter-spacing:-.2px}
+h1{font:800 clamp(30px,5vw,40px)/1.14 Manrope;letter-spacing:-.8px;margin:0 0 10px}
+.meta{font:400 13px JetBrains Mono,ui-monospace,monospace;color:#6a6a66;margin:0 0 34px}
+.meta span{background:#e5e3dd;padding:2px 6px;border-radius:4px}
+
+.langbar{display:flex;gap:8px;margin:0 0 34px}
+.langbar button{font:600 13.5px Manrope;padding:8px 16px;border-radius:999px;border:1px solid #cfcdc6;
+ background:#fff;color:#3a3a38;cursor:pointer}
+.langbar button.on{background:#1b1c1f;border-color:#1b1c1f;color:#fff}
+
+.tldr{border-left:3px solid #1b1c1f;padding:2px 0 2px 20px;margin:0 0 40px;font-size:17px;line-height:1.6}
+.tldr b{font-weight:700}
+
+h2{font:800 22px/1.28 Manrope;letter-spacing:-.3px;margin:44px 0 14px}
+h3{font:700 16.5px Manrope;margin:28px 0 8px}
+p{margin:0 0 14px}
+ul{margin:0 0 14px;padding-left:22px}
+li{margin:7px 0}
+li b{font-weight:600}
+.fill{font-weight:600}
+table{width:100%;border-collapse:collapse;margin:6px 0 20px;font-size:15px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid #ddd9d0;vertical-align:top}
+th{font:700 13px Manrope;text-transform:uppercase;letter-spacing:.06em;color:#5c5c58;
+ border-bottom:1px solid #bdbab2}
+td:first-child{width:38%;font-weight:600}
+.note{background:#eceae4;border-radius:9px;padding:15px 18px;margin:0 0 20px;font-size:15px;line-height:1.55}
+hr{border:0;border-top:1px solid #ddd9d0;margin:44px 0}
+footer{margin-top:46px;font-size:13.5px;color:#6a6a66}
+footer p{margin:0 0 7px}
+.hide{display:none}
+a{color:#2f6b3f}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="brand">
+    <div class="mark"><i style="height:7px"></i><i style="height:13px"></i><i style="height:9px"></i><i style="height:16px"></i><i style="height:11px"></i></div>
+    <b>Tubik</b>
+  </div>
+</header>
+
+<div class="langbar">
+  <button id="btn-en" class="on" onclick="setLang('en')">English</button>
+  <button id="btn-uk" onclick="setLang('uk')">Українська</button>
+</div>
+
+<!-- ============================== ENGLISH ============================== -->
+<section id="doc-en">
+  <h1>Support</h1>
+  <p class="meta">Tubik for iOS · version 1.0 · updated <span class="fill">4 September 2026</span></p>
+
+  <div class="tldr">
+    <b>Write to <span class="fill">nrg.ck.ua@gmail.com</span> and you will get an answer,
+    usually within a few working days.</b> Tubik is made by one person, in English or
+    Ukrainian, and every message is read by that person rather than by a queue. The
+    answers below cover what people ask most often.
+  </div>
+
+  <h2>1. How to report a problem</h2>
+  <p>Send an email to <span class="fill">nrg.ck.ua@gmail.com</span>. The app can do it for
+  you: <b>More → Email developer</b> opens a message with the device model, the iOS
+  version and the Tubik build already filled in.</p>
+  <p>If you write manually, please include:</p>
+  <ul>
+    <li>your device and iOS version — for example, iPhone 14, iOS 18.4;</li>
+    <li>the Tubik version from <b>More → About</b>;</li>
+    <li>what you did, what you expected, and what happened instead;</li>
+    <li>a screenshot or a screen recording, if the problem is visible.</li>
+  </ul>
+  <p>A file that will not import or will not play is worth naming: its extension and
+  where it came from usually explain the case on their own.</p>
+
+  <h2>2. Adding your music</h2>
+  <h3>Where do the files come from?</h3>
+  <p>Tubik plays audio files that you add yourself. There are two ways in: the add button
+  in the <b>Media</b> tab, which opens the Files app and takes anything reachable from
+  there — the iPhone itself, iCloud Drive or another storage provider — and the built-in
+  browser, which can save the audio a page requests while you play it.</p>
+  <p>Tubik has no catalogue of its own and does not search for music on third-party
+  services.</p>
+
+  <h3>I imported files and the list is empty</h3>
+  <p>Check that you picked audio files rather than a folder shortcut, and that the storage
+  provider had finished downloading them: a file that iCloud Drive still keeps in the
+  cloud has no bytes to copy yet. Open it once in the Files app so it downloads, then
+  import again.</p>
+
+  <h3>The track has no title, artist or cover</h3>
+  <p>Titles, artists, albums and covers are read from the tags inside the file. A file
+  without tags — which is most of what comes from the web — is titled from its file name,
+  and Tubik splits <span class="fill">Artist — Title</span> back apart when the name looks
+  like that. Nothing is downloaded from the internet to fill the gaps.</p>
+
+  <h2>3. Playback</h2>
+  <h3>Does it play with the screen locked?</h3>
+  <p>Yes. Playback continues in the background, and the lock screen shows the title,
+  artist, cover and the usual controls. Audio stops if another app takes the audio
+  session — a call, a video, another player — which is how iOS works, not a setting in
+  Tubik.</p>
+
+  <h3>Where are the timer, speed, shuffle and repeat?</h3>
+  <p>Sleep timer, playback speed, shuffle and repeat-one are part of Tubik Premium. The
+  player itself, the queue, background playback and lock screen controls are free and stay
+  free.</p>
+
+  <h2>4. Subscription, purchases and refunds</h2>
+  <h3>I paid but Premium is not active</h3>
+  <p>Open <b>More → Tubik Premium → Restore purchases</b>. Restoring needs no account,
+  only the same Apple Account that made the purchase — this is the usual reason: a
+  purchase made on a family member's account, or on a different Apple ID, cannot be seen
+  from yours. If restoring does not help, write to us with the date of the purchase.</p>
+
+  <h3>How do I cancel?</h3>
+  <p>Subscriptions are managed by Apple, not by Tubik:
+  <a href="https://apps.apple.com/account/subscriptions" rel="noopener">apps.apple.com/account/subscriptions</a>,
+  or Settings → your name → Subscriptions on the device. Cancel at least 24 hours before
+  the period ends, otherwise the next one is charged. Premium features stay available
+  until the end of the period you already paid for.</p>
+
+  <h3>Can I get a refund?</h3>
+  <p>Refunds are Apple's to give, since Apple takes the payment. Ask at
+  <a href="https://reportaproblem.apple.com" rel="noopener">reportaproblem.apple.com</a>.
+  We cannot issue a refund ourselves and we never see your card.</p>
+
+  <h3>Do I lose my music if the subscription ends?</h3>
+  <p>No. Your files, folders and queue are yours and stay on the device. Premium unlocks
+  convenience: no ads, the timer, speed, shuffle, moving and copying between folders,
+  sorting, sign-in pages in the browser, themes, the alternate icon and exporting the
+  library. Nothing that plays your own files depends on it.</p>
+
+  <h2>5. The built-in browser</h2>
+  <h3>I opened a page and no audio links appeared</h3>
+  <p>Start playing the audio on the page first. Tubik lists the direct audio links a page
+  <em>requests</em> — until the page asks for the file, there is nothing to show. The
+  button at the bottom right carries the count.</p>
+
+  <h3>A link I saw earlier is gone</h3>
+  <p>The list keeps the fifteen most recent links for fifteen minutes. Links handed out by
+  a site usually carry a session token and stop working soon after, so a row that outlived
+  its link would promise a file that no longer exists.</p>
+
+  <h3>A page plays but nothing is offered</h3>
+  <p>Some streams are encrypted, and Tubik rejects those by design: it does not bypass
+  DRM, paywalls or sign-in. Please use only files you have the rights to.</p>
+
+  <h2>6. Your files and your data</h2>
+  <p>Everything Tubik knows lives on the device: the audio files, the folder tree, the
+  queue and the settings. There is no account and no server of ours to hold them.</p>
+  <ul>
+    <li><b>Getting the library out:</b> <b>More → Export library</b> (Premium) copies the
+    files into a folder you choose, keeping the folder tree. A single track can always be
+    shared through the system share sheet, free of charge.</li>
+    <li><b>Freeing space:</b> <b>More → Storage</b> shows what takes room and can clear the
+    artwork cache. Covers come back with the next import.</li>
+    <li><b>Deleting everything:</b> delete the app. iOS removes its files with it, and
+    there is nothing left on our side to delete — see the
+    <a href="./">Privacy Policy</a>.</li>
+  </ul>
+
+  <h2>7. Ads and privacy</h2>
+  <p>The free version shows ads that Google selects; Premium removes them and the requests
+  behind them. Websites you open in the built-in browser carry their own ads and trackers
+  — those belong to the sites, and Premium does not touch them. What is collected, by whom
+  and why is written out in the <a href="./">Privacy Policy</a>.</p>
+
+  <hr>
+  <footer>
+    <p><b>Contact:</b> <span class="fill">nrg.ck.ua@gmail.com</span></p>
+    <p><b>Published by:</b> <span class="fill">Taras Grygorovych Shevchenko, PE</span></p>
+    <p><a href="./">Privacy Policy</a> · <a href="./marketing.html">About Tubik</a></p>
+  </footer>
+</section>
+
+<!-- ============================== УКРАЇНСЬКА ============================== -->
+<section id="doc-uk" class="hide">
+  <h1>Підтримка</h1>
+  <p class="meta">Tubik для iOS · версія 1.0 · оновлено <span class="fill">4 вересня 2026</span></p>
+
+  <div class="tldr">
+    <b>Пишіть на <span class="fill">nrg.ck.ua@gmail.com</span> — відповідь буде, зазвичай
+    протягом кількох робочих днів.</b> Tubik робить одна людина, англійською або
+    українською, і кожен лист читає саме вона, а не черга. Нижче — те, про що питають
+    найчастіше.
+  </div>
+
+  <h2>1. Як повідомити про проблему</h2>
+  <p>Напишіть на <span class="fill">nrg.ck.ua@gmail.com</span>. Застосунок уміє зробити це
+  за вас: <b>More → Написати розробнику</b> відкриває лист, у якому вже вказані модель
+  пристрою, версія iOS і збірка Tubik.</p>
+  <p>Якщо пишете вручну, додайте, будь ласка:</p>
+  <ul>
+    <li>пристрій і версію iOS — наприклад, iPhone 14, iOS 18.4;</li>
+    <li>версію Tubik із <b>More → Про застосунок</b>;</li>
+    <li>що ви робили, чого очікували й що сталося натомість;</li>
+    <li>скріншот або запис екрана, якщо проблему видно.</li>
+  </ul>
+  <p>Файл, який не імпортується або не грає, варто назвати: розширення й те, звідки він
+  узявся, зазвичай пояснюють випадок самі.</p>
+
+  <h2>2. Як додати музику</h2>
+  <h3>Звідки беруться файли?</h3>
+  <p>Tubik грає аудіофайли, які ви додаєте самі. Шляхів усередину два: кнопка додавання на
+  вкладці <b>Медіа</b> — вона відкриває «Файли» й бере все, що звідти доступне: сам
+  iPhone, iCloud Drive чи інше сховище, — і вбудований браузер, який уміє зберегти аудіо,
+  що його запитує сторінка, поки ви його слухаєте.</p>
+  <p>Власного каталогу застосунок не має й музику на сторонніх сервісах не шукає.</p>
+
+  <h3>Імпортував файли, а список порожній</h3>
+  <p>Перевірте, що вибрані саме аудіофайли, а не ярлик теки, і що сховище встигло їх
+  завантажити: у файлу, який iCloud Drive досі тримає в хмарі, ще немає байтів для
+  копіювання. Відкрийте його один раз у «Файлах», щоб він завантажився, і повторіть
+  імпорт.</p>
+
+  <h3>У треку немає назви, виконавця чи обкладинки</h3>
+  <p>Назви, виконавці, альбоми й обкладинки читаються з тегів усередині файлу. Файл без
+  тегів — а таким приїжджає майже все з мережі — підписується іменем файлу, і якщо воно
+  має вигляд <span class="fill">Виконавець — Назва</span>, Tubik розбирає його назад. Із
+  інтернету нічого не довантажується.</p>
+
+  <h2>3. Відтворення</h2>
+  <h3>Чи грає із заблокованим екраном?</h3>
+  <p>Так. Відтворення триває у фоні, а на екрані блокування видно назву, виконавця,
+  обкладинку й звичне керування. Звук зупиняється, коли аудіосесію забирає інший
+  застосунок — дзвінок, відео, інший плеєр, — і це поведінка iOS, а не налаштування
+  Tubik.</p>
+
+  <h3>Де таймер, швидкість, перемішування й повтор?</h3>
+  <p>Таймер сну, швидкість відтворення, перемішування й повтор одного треку входять до
+  Tubik Premium. Сам плеєр, черга, фонове відтворення й керування з екрана блокування
+  безплатні й такими лишаються.</p>
+
+  <h2>4. Підписка, покупки й повернення коштів</h2>
+  <h3>Я оплатив, а Premium не активний</h3>
+  <p>Відкрийте <b>More → Tubik Premium → Відновити покупки</b>. Відновлення не потребує
+  акаунта — лише того самого акаунта Apple, з якого була покупка. Це й буває причиною
+  найчастіше: покупку, зроблену з акаунта когось із родини або з іншого Apple ID, з вашого
+  не видно. Якщо відновлення не допомогло — напишіть нам і вкажіть дату покупки.</p>
+
+  <h3>Як скасувати підписку?</h3>
+  <p>Підписками керує Apple, а не Tubik:
+  <a href="https://apps.apple.com/account/subscriptions" rel="noopener">apps.apple.com/account/subscriptions</a>
+  або «Налаштування → ваше ім'я → Підписки» на пристрої. Скасовувати треба щонайменше за
+  24 години до кінця періоду, інакше спишеться наступний. Функції Premium лишаються
+  доступними до кінця вже оплаченого періоду.</p>
+
+  <h3>Чи можна повернути гроші?</h3>
+  <p>Повернення робить Apple, бо оплату приймає теж вона. Запит — на
+  <a href="https://reportaproblem.apple.com" rel="noopener">reportaproblem.apple.com</a>.
+  Самостійно повернути кошти ми не можемо й вашої картки не бачимо ніколи.</p>
+
+  <h3>Чи втрачу музику, коли підписка скінчиться?</h3>
+  <p>Ні. Файли, теки й черга — ваші й лишаються на пристрої. Premium відмикає зручність:
+  відсутність реклами, таймер, швидкість, перемішування, перенесення й копіювання між
+  теками, сортування, сторінки входу в браузері, теми, альтернативну іконку й експорт
+  бібліотеки. Ніщо з того, що відтворює ваші власні файли, від підписки не залежить.</p>
+
+  <h2>5. Вбудований браузер</h2>
+  <h3>Відкрив сторінку — аудіопосилань немає</h3>
+  <p>Спершу запустіть відтворення на самій сторінці. Tubik показує прямі аудіопосилання,
+  які сторінка <em>запитала</em>; поки вона не попросила файл, показувати нема чого.
+  Лічильник — на кнопці внизу праворуч.</p>
+
+  <h3>Посилання, яке я бачив раніше, зникло</h3>
+  <p>Список тримає п'ятнадцять останніх посилань протягом п'ятнадцяти хвилин. Посилання,
+  які видає сайт, зазвичай живуть із токеном сесії й невдовзі перестають працювати, тож
+  рядок, що пережив своє посилання, обіцяв би файл, якого вже немає.</p>
+
+  <h3>Сторінка грає, але нічого не пропонується</h3>
+  <p>Частина потоків зашифрована, і такі Tubik відхиляє свідомо: він не обходить DRM,
+  платний доступ чи вхід в акаунт. Користуйтеся лише файлами, права на які у вас є.</p>
+
+  <h2>6. Ваші файли й дані</h2>
+  <p>Усе, що знає Tubik, живе на пристрої: аудіофайли, дерево тек, черга й налаштування.
+  Акаунта немає, нашого сервера, який щось із цього тримав би, — теж.</p>
+  <ul>
+    <li><b>Дістати бібліотеку назовні:</b> <b>More → Експортувати бібліотеку</b> (Premium)
+    копіює файли у вибрану теку разом із деревом тек. Окремим треком завжди можна
+    поділитися системним «Поділитися» — безплатно.</li>
+    <li><b>Звільнити місце:</b> <b>More → Сховище</b> показує, що скільки займає, і вміє
+    очистити кеш обкладинок. Обкладинки повернуться з наступним імпортом.</li>
+    <li><b>Видалити все:</b> видаліть застосунок. iOS прибере його файли разом із ним, а на
+    нашому боці видаляти нема чого — див.
+    <a href="./">політику конфіденційності</a>.</li>
+  </ul>
+
+  <h2>7. Реклама й конфіденційність</h2>
+  <p>Безплатна версія показує оголошення, які добирає Google; Premium прибирає і їх, і
+  запити за ними. Сайти, які ви відкриваєте у вбудованому браузері, несуть власну рекламу
+  й трекери — вони належать сайтам, і Premium їх не чіпає. Що саме збирається, ким і
+  навіщо — розписано в <a href="./">політиці конфіденційності</a>.</p>
+
+  <hr>
+  <footer>
+    <p><b>Контакт:</b> <span class="fill">nrg.ck.ua@gmail.com</span></p>
+    <p><b>Видавець:</b> <span class="fill">Тарас Григорович Шевченко, ФОП</span></p>
+    <p><a href="./">Політика конфіденційності</a> · <a href="./marketing.html">Про Tubik</a></p>
+  </footer>
+</section>
+
+</div>
+<script>
+function setLang(l){
+  document.getElementById('doc-en').classList.toggle('hide', l!=='en');
+  document.getElementById('doc-uk').classList.toggle('hide', l!=='uk');
+  document.getElementById('btn-en').classList.toggle('on', l==='en');
+  document.getElementById('btn-uk').classList.toggle('on', l==='uk');
+  document.documentElement.lang = l;
+  window.scrollTo(0,0);
+}
+</script>
+</body>
+</html>
